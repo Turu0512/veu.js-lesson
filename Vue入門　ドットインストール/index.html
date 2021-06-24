@@ -10,13 +10,16 @@
   <body>
     <div id="app" class="container">
       <h1>My Todos</h1>
-      <ul>
+      <ul v-if="todos.length">
         <li v-for="(todo,index) in todos">
+          <!-- v-ifよりv-forが優先されるため、並べて書かない。 -->
           <input type="checkbox" v-model="todo.isDone" />
-          <!-- <span v-bind:class"{done: todo.isDone}">{{ todo.title }}></span> v-bindは省略できる。 todo.isDoneがトゥルーだったらdoneをつけるの意味-->
           <span :class="{done: todo.isDone}">{{ todo.title }}></span>
           <span @click="deleteItem(index)" class="command">[x]</span>
         </li>
+      </ul>
+      <ul v-else>
+        <li>Nothing to do , yay!</li>
       </ul>
 
       <form @submit.prevent="addItem">
