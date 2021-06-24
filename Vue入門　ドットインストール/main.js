@@ -20,6 +20,7 @@ data: {
     title: 'task3',
     isDone: true
   }]
+
 },
 methods: {
 
@@ -33,10 +34,21 @@ methods: {
     // Boxの中を空にする
   },
   deleteItem: function(index){
-    if(confirm('are you sure?'))
+    if(confirm('are you sure?')){
     this.todos.splice(index,1);
     }
-}
+    }
+  },
+
+  computed:{
+    remaining: function(){
+      let items = this.todos.filter(function(todo){
+        return !todo.isDone;
+        // isDoneがfalse、要素が残っていれば
+      });
+      return items.length;
+    }
+  }
 
 });
 })();
