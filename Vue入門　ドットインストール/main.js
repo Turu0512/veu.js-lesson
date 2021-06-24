@@ -20,8 +20,22 @@ data: {
     title: 'task3',
     isDone: true
   }]
-
 },
+
+watch: {
+  todos:{
+    // localStorage.setItem('todos',JSON.stringify(this.todo));
+    // alert('Data saved');
+    // データの中身までは記録してくれない↓を使う
+      handler:function(){
+        localStorage.setItem('todos',JSON.stringify(this.todo));
+    // alert('Data saved');
+      },
+deep:true
+    }
+  
+},
+
 methods: {
 
   addItem: function(){
