@@ -16,8 +16,11 @@
         <li>{{ todos[2] }}</li> -->
         <li v-for="todo in todos">{{ todo }}</li>
       </ul>
-      <form>
-        <input type="text" />
+      <!-- <form v-on:submit="addItem"> -->
+      <!-- v-onは＠で省略できる -->
+      <form @submit.prevent="addItem">
+        <!-- javascriptのpreventDefault()を省略している -->
+        <input type="text" v-model="newItem" />
         <input type="submit" value="Add" />
       </form>
     </div>
