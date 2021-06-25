@@ -8,13 +8,21 @@
     <script src="https://unpkg.com/vue@next"></script>
   </head>
   <body>
-    <div id="app1">app1:{{message}}</div>
+    <div id="app1">
+      <p>{{ count }}回クリックしました</p>
+      <button @click="increment">カウントを増やす</button>
+    </div>
     <script>
       const App1 = {
         data() {
           return {
-            message: "Hello!",
+            count: 0,
           };
+        },
+        methods: {
+          increment: function () {
+            this.count += 1;
+          },
         },
       };
 
