@@ -18,15 +18,15 @@
       }
     </style>
     <div id="app1">
-      <p v-bind:class="class1">{{class1}}です</p>
-      <p :class="class1">{{class1}}です</p>
-      <!-- 省略型 -->
+      <ul>
+        <li v-for="todo in todos">{{todo.text}}</li>
+      </ul>
     </div>
     <script>
       const App1 = {
         data() {
           return {
-            class1: "blue",
+            todos: [{ text: "aaa" }, { text: "bbb" }, { text: "ccc" }],
           };
         },
       };
