@@ -8,21 +8,26 @@
     <script src="https://unpkg.com/vue@next"></script>
   </head>
   <body>
+    <style>
+      .blue {
+        color: blue;
+      }
+
+      .red {
+        color: red;
+      }
+    </style>
     <div id="app1">
-      <span v-if="seen">あいうえお</span>
-      <button @click="off">表示OFF</button>
+      <p v-bind:class="class1">{{class1}}です</p>
+      <p :class="class1">{{class1}}です</p>
+      <!-- 省略型 -->
     </div>
     <script>
       const App1 = {
         data() {
           return {
-            seen: true,
+            class1: "blue",
           };
-        },
-        methods: {
-          off: function () {
-            this.seen = false;
-          },
         },
       };
 
