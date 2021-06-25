@@ -19,19 +19,22 @@
     </style>
     <div id="app1">
       <ul>
-        <li v-for="todo in todos">{{todo.text}}</li>
+        <template1></template1>
+        <template1></template1>
+        <template1></template1>
       </ul>
     </div>
-    <script>
-      const App1 = {
-        data() {
-          return {
-            todos: [{ text: "aaa" }, { text: "bbb" }, { text: "ccc" }],
-          };
-        },
-      };
 
-      app1 = Vue.createApp(App1);
+    <script>
+      const App1 = {};
+      const app1 = Vue.createApp(App1);
+
+      app1.component("template1", {
+        template: `
+        <button>ボタン</button>
+        <br>`,
+      });
+
       app1.mount("#app1");
     </script>
   </body>
