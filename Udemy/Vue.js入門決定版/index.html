@@ -8,10 +8,11 @@
   </head>
   <body>
     <div id="app">
-      <!-- NG -->
-      <!-- <input type="text" value="{{ message }}"/> -->
-      <input type="text" v-bind:value="message" />
+      <p v-show="toggle">Hello</p>
+      <!-- 表示・非表示が頻回の場合v-ifよりもv-showのほうが軽い -->
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="main.js"></script>
