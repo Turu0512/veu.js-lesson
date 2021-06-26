@@ -19,9 +19,8 @@
     </style>
     <div id="app1">
       <ul>
-        <template1></template1>
-        <template1></template1>
-        <template1></template1>
+        <template1 prop1="次へ"></template1>
+        <template1 prop1="前へ"></template1>
       </ul>
     </div>
 
@@ -30,8 +29,9 @@
       const app1 = Vue.createApp(App1);
 
       app1.component("template1", {
+        props: ["prop1"],
         template: `
-        <button>ボタン</button>
+        <button>{{prop1}}</button>
         <br>`,
       });
 
