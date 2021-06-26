@@ -8,9 +8,14 @@
   </head>
   <body>
     <div id="app">
-      <button @click="onclick">click</button>
+      <p>
+        <input type="text" v-model="message" />
+      </p>
+      <p>
+        <input type="text" v-model="message" />
+      </p>
 
-      <p>{{now}}</p>
+      <pre>{{ $data }}</pre>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
