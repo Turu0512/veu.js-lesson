@@ -8,11 +8,9 @@
   </head>
   <body>
     <div id="app">
-      <ul>
-        <li v-for="value in user">{{value}}</li>
-        <hr />
-        <li v-for="(value,key) in user">{{key}}:{{value}}</li>
-      </ul>
+      <button @click="onclick">click</button>
+
+      <p>{{now}}</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
