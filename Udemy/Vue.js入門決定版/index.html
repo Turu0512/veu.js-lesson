@@ -8,11 +8,12 @@
   </head>
   <body>
     <div id="app">
-      <p v-show="toggle">Hello</p>
-      <!-- 表示・非表示が頻回の場合v-ifよりもv-showのほうが軽い -->
+      <ul>
+        <li v-for="value in user">{{value}}</li>
+        <hr />
+        <li v-for="(value,key) in user">{{key}}:{{value}}</li>
+      </ul>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="main.js"></script>
