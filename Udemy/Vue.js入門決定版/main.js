@@ -1,11 +1,18 @@
-Vue.component('hello-component',{
-  template:'<p>Hello</p>'
-  })
+let app =new Vue({
+  el:'#app',
+  data:{
+  message:'Hello World!',
+  url:"https://jp.vuejs.org/",
+  toggle:false,
+  languages:[
+  'JavaScript','Ruby',
+  'Python'
+  ]
+  },
+  methods:{
+  click:function(){
+  this.message='Clicked!!'
   
-  var app = new Vue({
-    el: '#app',
-    data: {
-      message:'Hello Vue.js'
-      
-    }
+  },
+  }
   })
