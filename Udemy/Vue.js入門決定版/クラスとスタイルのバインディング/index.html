@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Real time search</title>
+  </head>
+  <body>
+    <div id="app">
+      <p>
+        Hello
+        <span v-bind:class="{large:isLarge,'text-denger':hasError}"
+          >Vue.js!</span
+        >
+        <!-- -　を含む場合は'で囲う -->
+      </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
