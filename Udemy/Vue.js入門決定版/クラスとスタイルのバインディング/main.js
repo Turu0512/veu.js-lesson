@@ -4,9 +4,12 @@
   let app = new Vue({
   el:'#app',
   data:{
-    largeClass: 'large',
-    dangerClass: 'text-danger',
-  },
+    classObject:{
+      large:true,
+      'text-danger':true,
+      // -　を含む場合は'で囲う
+    }
+  }
 
   
   })
