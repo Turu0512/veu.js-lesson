@@ -2,11 +2,13 @@
   'use strict';
 
   let app = new Vue({
-el:'#app',
-data: {
-isLarge: true,
-hasError: true,
-}
+  el:'#app',
+  data:{
+    largeClass: 'large',
+    dangerClass: 'text-danger',
+  },
 
-  }
-  )}
+  
+  })
+
+}
