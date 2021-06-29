@@ -1,0 +1,9 @@
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 5s;
+}
+/* クラスを付けるときはenter、外れる時の動作はleave */
+.v-enter,
+.v-leave-to {
+  opacity: 0;
+}
