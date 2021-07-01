@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Real time search</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- <p>
+        Hello
+        <span v-bind:class="isLarge ? largeClass: ''">Vue.js!</span>
+        三項目演算子　プロパティーに？　trueで実行：falseで実行　と書く
+      </p> -->
+      <p>
+        Hello
+        <span v-bind:class="[isLarge ? largeClass: '',dangerClass]"
+          >Vue.js!</span
+        >
+        <!-- 複数指定したいときは[]で囲み,で分ける -->
+      </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <style>
+      .blue {
+        color: blue;
+      }
+
+      .red {
+        color: red;
+      }
+    </style>
+    <div id="app1">
+      <ul>
+        <template1 prop1="次へ"></template1>
+        <template1 prop1="前へ"></template1>
+      </ul>
+    </div>
+
+    <script>
+      const App1 = {};
+      const app1 = Vue.createApp(App1);
+
+      app1.component("template1", {
+        props: ["prop1"],
+        template: `
+        <button>{{prop1}}</button>
+        <br>`,
+      });
+
+      app1.mount("#app1");
+    </script>
+  </body>
+</html>
