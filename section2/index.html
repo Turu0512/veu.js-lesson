@@ -8,7 +8,10 @@
 </head>
 <body>
  <div id="app">
-  <a :href="url">google.com</a>
+<a :[attribute]="url">google.com</a>
+<!-- <a :href="urlTwitter" :id="number">twitter</a> -->
+<!-- 省略できる -->
+<a v-bind="twitterObject">twitter</a>
  </div>
  <script src="vue.js"></script>
  <script src="main.js"></script>
