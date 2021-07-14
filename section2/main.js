@@ -1,13 +1,6 @@
 new Vue({
  el:'#app',
  data:{
-  message: 'hello world',
-   
+  url:'https://google.com'
  },
- methods: {
-  sayHi:function(){
-   this.message="hello Vue.js"
-    return this.message;
-  }
-  },
 })
