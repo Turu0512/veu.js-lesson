@@ -10,8 +10,12 @@
  <div id="app">
   <p>現在{{count}}回クリックされています</p>
   <button @click="countUp(3)">クリック</button>
-  <p @mousemove="changeMousePosition($event , 10)">マウスを乗せてください</p>
+  <p @mousemove="changeMousePosition($event , 10)">マウスを乗せてください
+   <span v-on:mousemove.stop.prevent>反応しないでください</span>
+  </p>
+  <a v-on:click.prevent.stop="noEvent" href="http://google.com">google.com</a>
  <p>X：{{x}} ,Y：{{y}}</p>
+
  </div>
  <script src="vue.js"></script>
  <script src="main.js"></script>
