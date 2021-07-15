@@ -13,5 +13,8 @@ new Vue({
     this.x = event.clientX/divide;
     this.y = event.clientY/divide;
    },
- }
+  myAlert(){
+    alert('アラート')
+   }
+  }
  })

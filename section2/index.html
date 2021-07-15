@@ -15,7 +15,9 @@
   </p>
   <a v-on:click.prevent.stop="noEvent" href="http://google.com">google.com</a>
  <p>X：{{x}} ,Y：{{y}}</p>
-
+  <!-- <input type="text" @keyup="myAlert"> -->
+  <input type="text" @keyup.enter="myAlert">
+  <!-- ketを指定できる -->
  </div>
  <script src="vue.js"></script>
  <script src="main.js"></script>
