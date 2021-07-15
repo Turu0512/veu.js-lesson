@@ -8,16 +8,8 @@
 </head>
 <body>
  <div id="app">
-  <p>現在{{count}}回クリックされています</p>
-  <button @[event]="countUp(3)">クリック</button>
-  <p @mousemove="changeMousePosition($event , 10)">マウスを乗せてください
-   <span v-on:mousemove.stop.prevent>反応しないでください</span>
-  </p>
-  <a v-on:click.prevent.stop="noEvent" href="http://google.com">google.com</a>
- <p>X：{{x}} ,Y：{{y}}</p>
-  <!-- <input type="text" @keyup="myAlert"> -->
-  <input type="text" @keyup.enter="myAlert">
-  <!-- ketを指定できる -->
+  <input type="text" v-model="message">
+ <h1>{{message}}</h1>
  </div>
  <script src="vue.js"></script>
  <script src="main.js"></script>
