@@ -9,14 +9,10 @@
 <body>
  <div id="app">
   <p>{{counter}}</p>
-  <button @click="counter+=1">+1</button>
-  <p>{{othercounter}}</p>
-  <button @click="othercounter+=1">別の+1</button>
-  <!-- <p>{{counter > 3? '3より上' : '３以下'}}</p> -->
+  <button @click="counter+=1">+1</button> 
   <p>{{lessThanThreeComputed}}</p>
-  <!-- 定義した値（this.counter）の変化だけに反応 -->
-  <p>{{lessThanThreeMethod()}}</p>
-  <!-- 画面の内容が変化するたびに実行されてしまう -->
+  
+  
  </div>
  <script src="vue.js"></script>
  <script src="main.js"></script>
