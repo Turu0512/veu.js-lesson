@@ -8,9 +8,9 @@
 </head>
 <body>
  <div id="app">
-  <p v-if="ok">おk！</p>
-  <p v-show="ok">ok</p>
-  <button @click="ok = !ok">push</button>
+  <ul>
+   <li v-for="(fruit,index) in fruits">{{index}}{{fruit}}</li>
+  </ul>
  </div>
  <script src="vue.js"></script>
  <script src="main.js"></script>
