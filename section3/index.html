@@ -11,6 +11,13 @@
   <ul>
    <li v-for="(fruit,index) in fruits">{{index}}{{fruit}}</li>
   </ul>
+  <ul>
+   <li v-for="(value,key,index) in object">{{index}}{{key}}{{value}}</li>
+  </ul>
+  <template v-for="fruite in fruits">
+   <li>{{fruite}}</li>
+   <hr>
+  </template>
  </div>
  <script src="vue.js"></script>
  <script src="main.js"></script>
