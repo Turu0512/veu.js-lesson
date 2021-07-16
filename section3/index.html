@@ -8,16 +8,13 @@
 </head>
 <body>
  <div id="app">
-  <ul>
-   <li v-for="(fruit,index) in fruits">{{index}}{{fruit}}</li>
-  </ul>
-  <ul>
-   <li v-for="(value,key,index) in object">{{index}}{{key}}{{value}}</li>
-  </ul>
-  <template v-for="fruite in fruits">
-   <li>{{fruite}}</li>
-   <hr>
-  </template>
+ <ul>
+  <div v-for="fruit in fruits" :key="fruit">
+   <p>{{fruit}}</p>
+   <input type="text">
+   </div>
+   <button @click="remove">push</button>
+ </ul>
  </div>
  <script src="vue.js"></script>
  <script src="main.js"></script>
