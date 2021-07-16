@@ -8,9 +8,13 @@
 </head>
 <body>
  <div id="app">
-  <p v-if="ok">ok!</p>
-  <p v-else-if="maybeOK">maybeOK</p>
-  <p v-else>Not ok...</p>
+  <template v-if="ok">
+   <!-- divと違ってタグとして表示されない。まとめるのに便利 -->
+   <p>hello world!</p>
+   <p>goodbye world!</p>
+   <p>こんにちわ</p>
+  </template>
+  <button @click="ok=!ok">push</button>
  </div>
  <script src="vue.js"></script>
  <script src="main.js"></script>
