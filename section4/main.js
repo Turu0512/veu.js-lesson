@@ -5,14 +5,10 @@ let vm = new Vue({
  }
 })
 
-let vm2 = new Vue({
- el:'#app2',
+new Vue({
  data:{
   message:'message2'
  },
- methods: {
-  change:function(){
-   vm.message='app2からの変更'
-  }
- }
-})
+ template:"<h1>{{message}}</h1>"
+
+}).$mount("#app2")
