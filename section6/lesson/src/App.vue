@@ -1,0 +1,5 @@
+<template>
+  <LikeNumber></LikeNumber>
+</template>
+
+
