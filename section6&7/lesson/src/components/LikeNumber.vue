@@ -1,6 +1,6 @@
 <template>
   <div>
-  <p>いいね（{{number}}）</p>
+  <p>いいね（{{number / 2}}）</p>
   <button @click="incriment">+1</button>
     
   </div>
@@ -8,11 +8,7 @@
 
 <script>
 export default{
-  data:function(){
-    return {
-      number:5
-    }
-  },
+  props:['number'],
   methods:{
     incriment:function(){
       this.number++
