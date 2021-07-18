@@ -1,6 +1,7 @@
 <template>
 <div>
- <LikeHeader v-slot="userHogeo">
+ <LikeHeader #default="userHogeo">
+  <!-- v-slotは＃に省略できる。名前が無いときには#default -->
   <h1>トータルのいいね数</h1>
   <h2>{{userHogeo}}</h2>
  </LikeHeader>
