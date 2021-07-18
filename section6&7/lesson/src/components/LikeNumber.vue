@@ -21,7 +21,7 @@ export default{
   },
   methods:{
     incriment(){
-     this.number++
+     this.$emit("my-click",this.number+1)
     }
   }
 }
