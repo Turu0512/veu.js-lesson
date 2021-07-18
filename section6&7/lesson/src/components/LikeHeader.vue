@@ -1,8 +1,8 @@
 <template>
 <div>
- <slot name="title" :user="user"></slot>
+ <slot :hogeUser="hogeUser"></slot>
  <hr>
- <slot name="likeNumber"></slot>
+ <slot></slot>
 </div>
 </template>
 
@@ -10,7 +10,7 @@
 export default{
  data(){
   return {
-   user:{
+   hogeUser:{
     firstName:"hogeo",
     lastName:"hoge"
  },
