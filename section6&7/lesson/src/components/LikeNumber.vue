@@ -1,17 +1,22 @@
 <template>
-  <div>
-  <p>いいね（{{number / 2}}）</p>
-  <button @click="incriment">+1</button>
-    
-  </div>
+ <div>
+ <p>いいね（{{halfNumber}}）</p>
+ <button @click="incriment">+1</button>
+   
+ </div>
 </template>
 
 <script>
 export default{
   props:['number'],
+  computed:{
+   halfNumber(){
+    return this.number / 2
+   }
+  },
   methods:{
-    incriment:function(){
-      this.number++
+    incriment(){
+     this.number++
     }
   }
 }

@@ -13,7 +13,8 @@ import LikeHeader from './components/LikeHeader.vue'
 export default {
   data(){
       return {
-        number:10
+        number:40
+        
         }
     },
   components:{
