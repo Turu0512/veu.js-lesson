@@ -1,8 +1,7 @@
 <template>
 <div>
- <slot :hogeUser="hogeUser"></slot>
- <hr>
  <slot></slot>
+
 </div>
 </template>
 
