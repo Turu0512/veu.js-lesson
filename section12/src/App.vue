@@ -4,8 +4,9 @@
 <transition name="fade" appear>
   <p v-if="show">hello</p>
 </transition>
-<transition name="slide" type="animation" appear>
+<transition enter-active-class="animate__animated animate__bounce" leave-active-class="animate__animated animate__shakeX" appear>
   <!-- typeでトランジションとアニメーションのどちらの時間に合わせるかを指定する -->
+  <!-- appearでリロード時にも適用 -->
   <p v-if="show">hello</p>
 </transition>
 </div>
