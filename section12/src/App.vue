@@ -1,10 +1,10 @@
 <template>
 <div class="main">
 <button @click="show=!show">切り替え</button>
-<transition name="fade">
+<transition name="fade" appear>
   <p v-if="show">hello</p>
 </transition>
-<transition name="slide" type="animation">
+<transition name="slide" type="animation" appear>
   <!-- typeでトランジションとアニメーションのどちらの時間に合わせるかを指定する -->
   <p v-if="show">hello</p>
 </transition>
