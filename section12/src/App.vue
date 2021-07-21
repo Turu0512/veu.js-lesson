@@ -4,6 +4,11 @@
   <button @click="myAnimation='fade'">fade</button>
   <p>{{myAnimation}}</p>
 <button @click="show=!show">切り替え</button>
+<transition name="fade">
+<p v-if="show" key="bye">さよなら</p>
+<p v-else key="hello">こんにちは</p>
+<!-- keyを設定することで二つの要素を区別する。ないとトランジションがかからない -->
+</transition>
 <transition :name="myAnimation" appear>
   <p v-if="show">hello</p>
 </transition>
