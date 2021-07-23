@@ -4,8 +4,8 @@ import Home from "./views/Home.vue"
 import Users from "./views/Users.vue"
 import UsersPosts from "./views/UsersPosts.vue"
 import UsersProfile from "./views/UsersProfile.vue"
-import HeaderUsers from "./views/HeaderUser.vue"
 import HeaderHome from "./views/HeaderHome.vue"
+import HeaderUsers from "./views/HeaderUser.vue"
 
 Vue.use(Router)
 
@@ -30,7 +30,10 @@ export default new Router({
    { path:"posts", component:UsersPosts},
    { path:"profile", component:UsersProfile, name:"users-id-profile"}
   ]
- }
+ },
   // idなどの情報を渡す
+  {path:'*',
+ redirect:'/'
+ }
  ]
 })
