@@ -9,6 +9,7 @@ export default new Router({
  mode:"history",
  routes: [
   { path:"/", component:Home}
-  ,{path:"/users/:id", component:Users}
+  ,{path:"/users/:id", component:Users,props:true}
+  // idなどの情報を渡す
  ]
 })
