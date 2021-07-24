@@ -6,18 +6,39 @@
     <br><br>
     <label for="comment">コメント</label>
     <textarea id="comment" v-model="comment"></textarea>
+    <br><br>
+    ,<button @click="createComment">コメントをサーバーに送る</button>
     <h2>掲示板</h2>
   </div>
 </template>
 
 <script>
+import axios from "axios"
 export default {
 data(){
   return {
     name:"",
     comment:""
   }
-}
+  },
+  methods:{
+    createComment(){
+      axios.post('https://firestore.googleapis.com/v1/projects/axios-lesson-587c4/databases/(default)/documents/cities/comments', //データを送るとき//
+    {
+      fields: {
+        name:{
+          stringValue: this.name
+        },
+        comment:{
+          stringValue: this.comment
+        }
+      }
+    }
+      )
+      this.name=""
+      this.comment=""
+    }
+  }
 }
 </script>
 
